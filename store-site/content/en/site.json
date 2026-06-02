@@ -1,0 +1,399 @@
+{
+  "locale": "en",
+  "htmlLang": "en",
+  "brand": "Büyük Başkan",
+  "nav": {
+    "brandMeta": "Club management",
+    "ariaLabel": "Site navigation",
+    "languageSwitch": "Türkçe",
+    "items": [
+      { "label": "Home", "href": "/" },
+      { "label": "Privacy", "href": "privacy/" },
+      { "label": "Terms", "href": "terms/" },
+      { "label": "Wiki", "href": "wiki/" },
+      { "label": "Store Kit", "href": "store/" }
+    ]
+  },
+  "footer": {
+    "notice": "Büyük Başkan is a football club management game with device-local career data.",
+    "legal": "Last updated: June 2, 2026"
+  },
+  "home": {
+    "eyebrow": "Chairman office",
+    "title": "Run the club through data, budget pressure, and supporters.",
+    "lead": "Büyük Başkan focuses on the club decision desk, not touchline button play. Squad planning, finance, stadium work, news, and board trust move through one career loop.",
+    "heroAlt": "Büyük Başkan store graphic",
+    "actions": [
+      { "label": "Open Wiki", "href": "wiki/" },
+      { "label": "Privacy Policy", "href": "privacy/" },
+      { "label": "Play Console Kit", "href": "store/" }
+    ],
+    "cards": [
+      { "kicker": "Career", "title": "Weekly club control", "summary": "League targets, board trust, news decisions, and match results progress in one save.", "href": "wiki/career/" },
+      { "kicker": "Finance", "title": "Keep the cash room alive", "summary": "Wage load, sponsor income, stadium investment, and debt risk are read together.", "href": "wiki/finance/" },
+      { "kicker": "Stadium", "title": "Grow income through facilities", "summary": "Stands, pitch, VIP spaces, and commercial units affect long-term club value.", "href": "wiki/stadium-facilities/" }
+    ],
+    "sections": [
+      {
+        "heading": "What does the player do?",
+        "paragraphs": [
+          "The player acts as club chairman, managing targets, budget, staff, and sporting decisions. The game focuses on the long-term effect of decisions across a season.",
+          "Career saves and preferences stay on the device in the current build; there is no online account system or automatic career-data upload to a developer server."
+        ],
+        "list": [
+          "Squad and transfer decisions",
+          "Finance and sponsor tracking",
+          "Stadium and facility investment",
+          "News-driven decision outcomes",
+          "Match viewing and result review"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updatedLabel": "Last updated: June 2, 2026",
+    "lead": "This policy explains how the current release build of Büyük Başkan handles data.",
+    "sections": [
+      {
+        "heading": "Short summary",
+        "paragraphs": [
+          "Büyük Başkan does not create user accounts, does not send personal data to a developer server, and does not store career saves outside the device in the current build.",
+          "Game saves, preferences, and chairman profile choices are stored in local device storage. Removing the app or clearing app data may remove those local records."
+        ],
+        "list": [
+          "No account system.",
+          "No automatic personal-data transfer to the developer.",
+          "Career data stays on the device.",
+          "The current Android manifest surface includes the INTERNET permission."
+        ]
+      },
+      {
+        "heading": "Data stored on the device",
+        "paragraphs": [
+          "The app may store game progress, team preferences, audio and presentation settings, career saves, and similar game state in device-local storage such as IndexedDB and localStorage.",
+          "This data is used to run the game. The developer does not automatically receive it."
+        ],
+        "list": [
+          "Career progress and club state",
+          "Save slots",
+          "Language, audio, and display preferences",
+          "Chairman name, club name, stadium name, and in-game choices"
+        ]
+      },
+      {
+        "heading": "Ads, purchases, and future SDKs",
+        "paragraphs": [
+          "No active AdMob or Google Play Billing SDK integration is visible in the current build, so this policy describes the current data flow.",
+          "If ads, rewarded ads, in-app purchases, or analytics SDKs are added, this policy, the terms, and the Play Console Data Safety declaration must be updated before release."
+        ],
+        "list": [
+          "Rewarded ads must disclose the ad provider's data use.",
+          "Billing purchases are processed through Google Play.",
+          "Full version, Super Stadium, or in-game cash pack purchases must not ship before store declarations are refreshed.",
+          "Social follow offers must clearly show the optional external-platform handoff before the user leaves the app."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Use the developer support email published on the store listing for privacy questions.",
+          "This is a release-ready draft; final legal approval belongs to the developer or product owner."
+        ],
+        "list": [
+          "Privacy URL: https://huntertrgy.github.io/buyukbaskan/en/privacy/",
+          "Terms URL: https://huntertrgy.github.io/buyukbaskan/en/terms/"
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "updatedLabel": "Last updated: June 2, 2026",
+    "lead": "These terms describe the basic rules for using Büyük Başkan.",
+    "sections": [
+      {
+        "heading": "App use",
+        "paragraphs": [
+          "Büyük Başkan is an entertainment football club management game. In-game money, club value, wage data, and transfer data do not represent real financial value.",
+          "The user agrees to use the app according to applicable store rules and local law."
+        ],
+        "list": [
+          "In-game decisions are simulation content.",
+          "Local save backup depends on device and platform settings.",
+          "Regular device backup is recommended against data-loss risk."
+        ]
+      },
+      {
+        "heading": "Purchases and ads",
+        "paragraphs": [
+          "No active purchase or ads SDK is visible in the current build, so this section is kept as a draft for future store releases.",
+          "If a full-version upgrade, Super Stadium, or rewarded ad support is added, purchase, refund, and advertising declarations must be updated according to store rules."
+        ],
+        "list": [
+          "Google Play purchase and refund flows run through Google's payment system.",
+          "Rewarded ad viewing must be optional.",
+          "In-game cash packs only affect the simulation balance; they do not represent real money or real financial value.",
+          "Social follow rewards should be optional, limited, and small enough not to distort the economy.",
+          "The full-version ad-removal scope must be stated in release notes."
+        ]
+      },
+      {
+        "heading": "Limitation of liability",
+        "paragraphs": [
+          "The app is provided as is. The developer is not responsible for losses caused by device failure, operating-system changes, user-deleted data, or changes outside the store build.",
+          "These terms should be reviewed by the developer before store release."
+        ],
+        "list": [
+          "This legal text is a draft.",
+          "Final responsibility belongs to the developer or product owner.",
+          "Current policy links must be published on the store listing."
+        ]
+      }
+    ]
+  },
+  "wiki": {
+    "eyebrow": "Game wiki",
+    "title": "Büyük Başkan Wiki",
+    "lead": "The launch wiki explains the core career loop and the decisions players need most in their first season.",
+    "backLabel": "Back to Wiki",
+    "cards": [
+      { "kicker": "01", "title": "Getting Started", "summary": "New career, club choice, targets, and the first week.", "href": "wiki/getting-started/" },
+      { "kicker": "02", "title": "Career", "summary": "Week advance, board trust, and season targets.", "href": "wiki/career/" },
+      { "kicker": "03", "title": "Finance", "summary": "Cash, wage load, debt, and support options.", "href": "wiki/finance/" },
+      { "kicker": "04", "title": "Transfers", "summary": "Buying, selling, listing, and balancing the budget.", "href": "wiki/transfers/" },
+      { "kicker": "05", "title": "Stadium and facilities", "summary": "Investments that grow income and club value.", "href": "wiki/stadium-facilities/" },
+      { "kicker": "06", "title": "Match flow", "summary": "Pre-match, live flow, and result review.", "href": "wiki/match-flow/" },
+      { "kicker": "07", "title": "FAQ", "summary": "Saves, data, ads, purchases, and store release notes.", "href": "wiki/faq/" }
+    ],
+    "pages": [
+      {
+        "slug": "getting-started",
+        "title": "Getting Started",
+        "lead": "New career setup, chairman identity, club choice, and first-week decisions.",
+        "sections": [
+          {
+            "heading": "First setup",
+            "paragraphs": [
+              "A new career defines the club, chairman name, stadium name, language, and presentation preferences. These choices become the base of the career save.",
+              "Checking squad, budget, and target information in the first week makes later decisions safer."
+            ],
+            "list": [
+              "Review club and rivals.",
+              "Check squad age, wage load, and quality spread.",
+              "Read weekly obligations in finance."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "career",
+        "title": "Career",
+        "lead": "The career loop is built around week advance, news, matches, and board evaluation.",
+        "sections": [
+          {
+            "heading": "Weekly flow",
+            "paragraphs": [
+              "Each week can change match results, finance movement, news, and club decisions.",
+              "Board trust and supporter expectations react to budget and squad decisions, not only results."
+            ],
+            "list": [
+              "Read important news before decisions.",
+              "Check squad and form before matches.",
+              "Keep the season target ahead of short-term panic."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "finance",
+        "title": "Finance",
+        "lead": "The finance screen tracks cash, income sources, wage load, and support options.",
+        "sections": [
+          {
+            "heading": "Cash balance",
+            "paragraphs": [
+              "Wages, transfer spend, and stadium investment directly affect the club's cash position.",
+              "If rewarded-ad support is added later, small cash help should be framed in the game world; the current build does not actively use that SDK."
+            ],
+            "list": [
+              "Check wage budget before transfers.",
+              "Balance large facility work against match income.",
+              "Use recurring income growth to escape negative cash."
+            ]
+          },
+          {
+            "heading": "Get Investment",
+            "paragraphs": [
+              "A future Get Investment section can be added to Finance. It can present small cash support through social follow tasks, rewarded ads, or in-game cash packs sold through Google Play Billing.",
+              "This flow is not active in the current build. Before release, economy balance, purchase restoration behavior, the privacy policy, terms, and the Play Console Data Safety declaration must be updated."
+            ],
+            "list": [
+              "Social follow: optional external link plus a small one-time in-game reward.",
+              "In-game cash purchase: Google Play Billing product plus restore/entitlement checks.",
+              "Rewarded ad: ad SDK declaration plus a small cash support scaled to the club treasury.",
+              "In-game copy can frame offers as municipal support, government aid, supporter donations, or sponsor investment."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "transfers",
+        "title": "Transfers",
+        "lead": "Transfer decisions should consider squad quality, wage budget, and team balance together.",
+        "sections": [
+          {
+            "heading": "Buying and selling",
+            "paragraphs": [
+              "The transfer market is not only about chasing higher ratings. Age, wage, position need, and club budget matter together.",
+              "Selling can create short-term cash, but a thin squad can weaken match performance and supporter trust."
+            ],
+            "list": [
+              "Identify missing positions first.",
+              "Flag older high-wage players as risk.",
+              "Check wage budget before offers."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "stadium-facilities",
+        "title": "Stadium and Facilities",
+        "lead": "Stadium and facility investments affect income, club value, and long-term growth.",
+        "sections": [
+          {
+            "heading": "Investment choice",
+            "paragraphs": [
+              "Stand, VIP, pitch, and commercial upgrades cost cash now; timed well, they strengthen club value later.",
+              "If Super Stadium later becomes an in-app purchase or in-game money unlock, purchased users should be able to claim it across new careers."
+            ],
+            "list": [
+              "Do not make major upgrades with unsafe cash.",
+              "Tie high-income upgrades to the season plan.",
+              "Track Super Stadium ownership as a product entitlement independent from career saves."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "match-flow",
+        "title": "Match Flow",
+        "lead": "The match screen moves through preparation, live events, and result review.",
+        "sections": [
+          {
+            "heading": "Matchday",
+            "paragraphs": [
+              "The pre-match screen helps review opponent and team status quickly. The live flow tracks score, events, and stats.",
+              "The result screen feeds not only the scoreline but also performance signals for next week's decisions."
+            ],
+            "list": [
+              "Check unavailable or tired players before the match.",
+              "Watch event tempo and card risk in live flow.",
+              "Recheck finance and news after the result."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "faq",
+        "title": "FAQ",
+        "lead": "Short answers about saves, data, ads, purchases, and store release.",
+        "sections": [
+          {
+            "heading": "Data and purchases",
+            "paragraphs": [
+              "There is no account system in the current build; saves are stored on the device.",
+              "If ads and in-app purchase SDKs are added, the privacy policy, terms, and Data Safety declaration must be updated before release closure."
+            ],
+            "list": [
+              "Saves can be lost if device app data is removed.",
+              "A future full version may remove ads except rewarded ads.",
+              "Super Stadium ownership should be claimable across careers."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "store": {
+    "eyebrow": "Play Console kit",
+    "title": "Store metadata and Data Safety draft",
+    "lead": "This page collects EN store text, image requirements, and current-build data declarations.",
+    "cards": [
+      {
+        "kicker": "Title",
+        "title": "Büyük Başkan",
+        "paragraphs": [
+          "Suggested category: Games > Sports or Simulation.",
+          "Support URL: https://huntertrgy.github.io/buyukbaskan/en/"
+        ],
+        "list": [
+          "Short description: Run a football club through budget, transfers, stadium work, and supporter pressure.",
+          "Full description: Büyük Başkan is a season-based football management game centered on the club office. Plan the squad, protect the transfer budget, time stadium investments, and track how news decisions affect club trust."
+        ]
+      },
+      {
+        "kicker": "Data Safety",
+        "title": "Current build declaration",
+        "paragraphs": [
+          "No user data collected by developer in current build.",
+          "Career data is stored on the device through IndexedDB and localStorage; there is no automatic transfer to a developer server."
+        ],
+        "list": [
+          "No account.",
+          "No personal data collection.",
+          "No active ads or purchase SDK.",
+          "Android manifest permission surface: INTERNET."
+        ]
+      },
+      {
+        "kicker": "Monetization plan",
+        "title": "Finance > Get Investment",
+        "paragraphs": [
+          "A future Finance section can group social follow rewards, rewarded ads, Google Play Billing in-game cash packs, and full-version/Super Stadium offers in one controlled surface.",
+          "This plan is not a current-build declaration; if Billing or ads SDKs are added, privacy, terms, Data Safety, and store metadata must be updated before release closure."
+        ],
+        "list": [
+          "Digital in-game cash packs must be sold through Google Play Billing.",
+          "Social follow tasks should remain optional external links.",
+          "Rewarded ads must disclose the ad provider's data use.",
+          "Cash support must be balanced with daily or weekly caps, treasury-health checks, and small one-time rewards.",
+          "Billing restore, refund/revocation, duplicate grants, and cross-career Super Stadium claim behavior must be tested.",
+          "If the full version removes ads except rewarded ads, the scope must be explicit in store text."
+        ]
+      },
+      {
+        "kicker": "Images",
+        "title": "Play Console asset list",
+        "paragraphs": [
+          "Prepare a 512x512 PNG app icon, 1024x500 feature graphic, and 6 Android phone screenshots.",
+          "Screenshot target is 1080x1920 9:16, 24-bit PNG, without alpha."
+        ],
+        "list": [
+          "Summary",
+          "News",
+          "Squad",
+          "Transfer",
+          "Stadium or Finance",
+          "Match result"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Required update before release",
+        "paragraphs": [
+          "If AdMob, Google Play Billing, analytics, or another third-party SDK is added, the privacy, terms, and Data Safety text on this page must be updated before release closure."
+        ],
+        "list": [
+          "Privacy URL: https://huntertrgy.github.io/buyukbaskan/en/privacy/",
+          "Terms URL: https://huntertrgy.github.io/buyukbaskan/en/terms/",
+          "Wiki URL: https://huntertrgy.github.io/buyukbaskan/en/wiki/",
+          "Google Play Payments policy: https://support.google.com/googleplay/android-developer/answer/9858738",
+          "Google Play Data Safety: https://support.google.com/googleplay/android-developer/answer/10787469",
+          "Google Play User Data policy: https://support.google.com/googleplay/android-developer/answer/10144311"
+        ]
+      }
+    ]
+  }
+}

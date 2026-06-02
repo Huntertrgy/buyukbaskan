@@ -1,0 +1,399 @@
+{
+  "locale": "tr",
+  "htmlLang": "tr",
+  "brand": "Büyük Başkan",
+  "nav": {
+    "brandMeta": "Kulüp yönetimi",
+    "ariaLabel": "Site menüsü",
+    "languageSwitch": "English",
+    "items": [
+      { "label": "Ana Sayfa", "href": "/" },
+      { "label": "Gizlilik", "href": "privacy/" },
+      { "label": "Şartlar", "href": "terms/" },
+      { "label": "Wiki", "href": "wiki/" },
+      { "label": "Mağaza Paketi", "href": "store/" }
+    ]
+  },
+  "footer": {
+    "notice": "Büyük Başkan, cihaz içi kariyer verileriyle çalışan futbol kulübü yönetim oyunudur.",
+    "legal": "Son güncelleme: 2 Haziran 2026"
+  },
+  "home": {
+    "eyebrow": "Başkanlık masası",
+    "title": "Kulübü veri, bütçe ve taraftar baskısıyla yönet.",
+    "lead": "Büyük Başkan sahadaki düğmelere değil kulübün karar masasına odaklanır. Kadro, finans, stadyum, haber akışı ve yönetim güveni tek kariyer döngüsünde birleşir.",
+    "heroAlt": "Büyük Başkan mağaza görseli",
+    "actions": [
+      { "label": "Wiki'yi aç", "href": "wiki/" },
+      { "label": "Gizlilik metni", "href": "privacy/" },
+      { "label": "Play Console paketi", "href": "store/" }
+    ],
+    "cards": [
+      { "kicker": "Kariyer", "title": "Hafta hafta kulüp yönetimi", "summary": "Lig hedefleri, yönetim güveni, haber kararları ve maç sonuçları aynı dosyada ilerler.", "href": "wiki/kariyer/" },
+      { "kicker": "Finans", "title": "Kasayı canlı tut", "summary": "Maaş yükü, sponsor gelirleri, stadyum yatırımları ve borç riski birlikte okunur.", "href": "wiki/finans/" },
+      { "kicker": "Stadyum", "title": "Geliri tesisle büyüt", "summary": "Tribün, zemin, VIP ve ticari alanlar kulübün uzun vadeli değerini etkiler.", "href": "wiki/stadyum-tesisler/" }
+    ],
+    "sections": [
+      {
+        "heading": "Oyuncu ne yapar?",
+        "paragraphs": [
+          "Oyuncu başkan rolünde kulüp hedeflerini, bütçeyi, teknik ekibi ve sportif kararları yönetir. Oyun, tek bir maç aksiyonundan çok sezon boyunca verilen kararların toplam etkisine odaklanır.",
+          "Kariyer kayıtları ve tercihler mevcut build'de cihaz üzerinde saklanır; çevrim içi hesap sistemi veya geliştirici sunucusuna kayıt gönderimi yoktur."
+        ],
+        "list": [
+          "Kadro ve transfer kararları",
+          "Finans ve sponsor takibi",
+          "Stadyum ve tesis yatırımları",
+          "Haber akışı üzerinden karar sonuçları",
+          "Maç izleme ve sonuç değerlendirme"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "updatedLabel": "Son güncelleme: 2 Haziran 2026",
+    "lead": "Bu politika Büyük Başkan uygulamasının mevcut yayın build'inde veriyi nasıl işlediğini açıklar.",
+    "sections": [
+      {
+        "heading": "Kısa özet",
+        "paragraphs": [
+          "Büyük Başkan mevcut build'de kullanıcı hesabı açmaz, geliştirici sunucusuna kişisel veri göndermez ve oyuncunun kariyer kayıtlarını cihaz dışında saklamaz.",
+          "Oyun kayıtları, tercihleri ve başkan profili cihaz üzerindeki yerel depolama alanlarında tutulur. Uygulamayı silmek veya oyun verisini sıfırlamak bu yerel verileri kaldırabilir."
+        ],
+        "list": [
+          "Hesap sistemi yoktur.",
+          "Geliştiriciye otomatik kişisel veri aktarımı yoktur.",
+          "Kariyer verileri cihaz içinde kalır.",
+          "Android manifestinde mevcut izin yüzeyi INTERNET iznidir."
+        ]
+      },
+      {
+        "heading": "Cihazda saklanan veriler",
+        "paragraphs": [
+          "Uygulama oyun ilerlemesini, takım tercihlerini, ses ve sunum ayarlarını, kariyer kayıtlarını ve benzer oyun içi durumları IndexedDB ve localStorage gibi cihaz yerel depolama alanlarında saklayabilir.",
+          "Bu veriler oyunun çalışması için kullanılır. Geliştirici bu verileri otomatik olarak almaz."
+        ],
+        "list": [
+          "Kariyer ilerlemesi ve kulüp durumu",
+          "Kayıt slotları",
+          "Dil, ses ve sunum tercihleri",
+          "Başkan adı, kulüp adı, stadyum adı ve oyun içi seçimler"
+        ]
+      },
+      {
+        "heading": "Reklam, satın alma ve gelecek SDK'lar",
+        "paragraphs": [
+          "Mevcut build'de aktif AdMob veya Google Play Billing SDK entegrasyonu görünmediği için bu politika mevcut veri akışını esas alır.",
+          "Reklam, ödüllü reklam, uygulama içi satın alma veya analitik SDK'sı eklenirse bu politika, kullanım şartları ve Play Console Data Safety beyanı yayın öncesinde yeniden güncellenmelidir."
+        ],
+        "list": [
+          "Rewarded ads eklenirse reklam sağlayıcısının veri kullanımı ayrıca açıklanmalıdır.",
+          "Billing eklenirse satın alma işlemleri Google Play tarafından işlenir.",
+          "Tam sürüm, Süper Stadyum veya oyun içi para paketleri etkinleşmeden önce mağaza beyanları yenilenmelidir.",
+          "Sosyal medya takip teklifleri eklenirse kullanıcı isteğe bağlı dış platform yönlendirmesini açıkça görmelidir."
+        ]
+      },
+      {
+        "heading": "İletişim",
+        "paragraphs": [
+          "Gizlilik soruları için mağaza sayfasında yayınlanacak geliştirici destek e-posta adresi kullanılmalıdır.",
+          "Bu metin yayına hazır taslaktır; nihai hukuki onay geliştirici veya ürün sahibine aittir."
+        ],
+        "list": [
+          "Gizlilik URL'si: https://huntertrgy.github.io/buyukbaskan/tr/privacy/",
+          "Şartlar URL'si: https://huntertrgy.github.io/buyukbaskan/tr/terms/"
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Kullanım Şartları",
+    "updatedLabel": "Son güncelleme: 2 Haziran 2026",
+    "lead": "Bu şartlar Büyük Başkan uygulamasını kullanırken geçerli temel kuralları açıklar.",
+    "sections": [
+      {
+        "heading": "Uygulama kullanımı",
+        "paragraphs": [
+          "Büyük Başkan eğlence amaçlı futbol kulübü yönetim oyunudur. Oyun içi para, kulüp değeri, maaş ve transfer verileri gerçek finansal değer taşımaz.",
+          "Kullanıcı uygulamayı yürürlükteki mağaza kurallarına ve yerel mevzuata uygun şekilde kullanmayı kabul eder."
+        ],
+        "list": [
+          "Oyun içi kararlar simülasyon amaçlıdır.",
+          "Yerel kayıtların yedeklenmesi kullanıcının cihaz ve platform ayarlarına bağlıdır.",
+          "Hatalar veya veri kaybı riskine karşı düzenli cihaz yedeklemesi önerilir."
+        ]
+      },
+      {
+        "heading": "Satın almalar ve reklamlar",
+        "paragraphs": [
+          "Mevcut build'de aktif satın alma veya reklam SDK'sı görünmediği için bu bölüm gelecekteki mağaza sürümleri için taslak olarak tutulur.",
+          "Tam sürüm yükseltmesi, Süper Stadyum veya ödüllü reklam desteği eklenirse satın alma, iade ve reklam beyanları mağaza kurallarına göre güncellenecektir."
+        ],
+        "list": [
+          "Google Play satın alma ve iade akışları Google'ın ödeme sistemi üzerinden yürür.",
+          "Ödüllü reklam izleme isteğe bağlı olmalıdır.",
+          "Oyun içi para paketleri yalnızca simülasyon bakiyesi sağlar; gerçek para veya gerçek finansal değer yerine geçmez.",
+          "Sosyal medya takip ödülleri isteğe bağlı, sınırlı ve oyun ekonomisini bozmayacak küçük destekler olmalıdır.",
+          "Tam sürüm reklam kaldırma kapsamı yayın notlarında ayrıca belirtilmelidir."
+        ]
+      },
+      {
+        "heading": "Sorumluluk sınırı",
+        "paragraphs": [
+          "Uygulama olduğu gibi sunulur. Geliştirici, cihaz arızası, işletim sistemi değişikliği, kullanıcı tarafından silinen veriler veya mağaza dışı değişikliklerden doğan kayıplardan sorumlu değildir.",
+          "Bu şartlar mağaza yayını öncesinde geliştirici tarafından son kez gözden geçirilmelidir."
+        ],
+        "list": [
+          "Hukuki metin taslaktır.",
+          "Nihai sorumluluk geliştirici veya ürün sahibine aittir.",
+          "Güncel sürümde geçerli politika bağlantıları mağaza sayfasında yayınlanmalıdır."
+        ]
+      }
+    ]
+  },
+  "wiki": {
+    "eyebrow": "Oyun wiki",
+    "title": "Büyük Başkan Wiki",
+    "lead": "Launch wiki, temel kariyer döngüsünü ve oyuncunun ilk sezonda en çok ihtiyaç duyacağı karar alanlarını açıklar.",
+    "backLabel": "Wiki'ye dön",
+    "cards": [
+      { "kicker": "01", "title": "Başlangıç", "summary": "Yeni kariyer, kulüp seçimi, hedefler ve ilk hafta.", "href": "wiki/baslangic/" },
+      { "kicker": "02", "title": "Kariyer", "summary": "Hafta ilerletme, yönetim güveni ve sezon hedefi.", "href": "wiki/kariyer/" },
+      { "kicker": "03", "title": "Finans", "summary": "Kasa, maaş yükü, borç ve finansal destek.", "href": "wiki/finans/" },
+      { "kicker": "04", "title": "Transfer", "summary": "Oyuncu alma, satma, listeleme ve bütçe dengesi.", "href": "wiki/transfer/" },
+      { "kicker": "05", "title": "Stadyum ve tesisler", "summary": "Geliri ve kulüp değerini büyüten yatırımlar.", "href": "wiki/stadyum-tesisler/" },
+      { "kicker": "06", "title": "Maç akışı", "summary": "Maç öncesi, canlı akış ve sonuç ekranı.", "href": "wiki/mac-akisi/" },
+      { "kicker": "07", "title": "SSS", "summary": "Kayıt, veri, reklam ve satın alma soruları.", "href": "wiki/sss/" }
+    ],
+    "pages": [
+      {
+        "slug": "baslangic",
+        "title": "Başlangıç",
+        "lead": "Yeni kariyer, başkan kimliği, kulüp seçimi ve ilk hafta kararları.",
+        "sections": [
+          {
+            "heading": "İlk kurulum",
+            "paragraphs": [
+              "Yeni kariyerde kulüp, başkan adı, stadyum adı, dil ve sunum tercihleri belirlenir. Bu seçimler kariyer kaydının temelini oluşturur.",
+              "İlk haftada kadro, bütçe ve hedef bilgilerini kontrol etmek ilerleyen kararları daha güvenli hale getirir."
+            ],
+            "list": [
+              "Kulüp ve rakipleri gözden geçir.",
+              "Kadro yaşını, maaş yükünü ve kalite dağılımını kontrol et.",
+              "Finans ekranından haftalık yükümlülükleri oku."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "kariyer",
+        "title": "Kariyer",
+        "lead": "Kariyer döngüsü hafta ilerletme, haberler, maçlar ve yönetim değerlendirmesi üzerine kurulur.",
+        "sections": [
+          {
+            "heading": "Hafta akışı",
+            "paragraphs": [
+              "Her hafta maçlar, finans hareketleri, haberler ve kulüp içi kararlar kariyer durumunu değiştirir.",
+              "Yönetim güveni ve taraftar beklentisi yalnızca sonuçlara değil, bütçe ve kadro kararlarına da tepki verir."
+            ],
+            "list": [
+              "Önemli haberleri karar almadan önce oku.",
+              "Maç öncesi kadro ve form durumunu kontrol et.",
+              "Sezon hedefini kısa vadeli panik kararlarının önünde tut."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "finans",
+        "title": "Finans",
+        "lead": "Finans ekranı kasayı, gelir kaynaklarını, maaş yükünü ve destek seçeneklerini takip eder.",
+        "sections": [
+          {
+            "heading": "Kasa dengesi",
+            "paragraphs": [
+              "Maaşlar, transfer harcamaları ve stadyum yatırımları kulübün nakit pozisyonunu doğrudan etkiler.",
+              "Gelecekte ödüllü reklam destekleri eklenirse küçük nakit yardımı oyun içi bağlamla açıklanmalıdır; mevcut build bu SDK'yı aktif kullanmaz."
+            ],
+            "list": [
+              "Maaş bütçesini transferden önce kontrol et.",
+              "Büyük tesis yatırımlarını maç geliriyle dengele.",
+              "Negatif kasayı kalıcı gelir artışıyla kapatmaya çalış."
+            ]
+          },
+          {
+            "heading": "Yatırım Al",
+            "paragraphs": [
+              "Finans ekranına gelecek bir Yatırım Al bölümü eklenebilir. Bu bölüm küçük nakit desteklerini sosyal medya takip görevleri, ödüllü reklamlar veya Google Play Billing ile satılan oyun içi para paketleri olarak sunabilir.",
+              "Bu akış mevcut build'de aktif değildir. Yayına alınmadan önce ekonomi dengesi, satın alma geri yükleme davranışı, gizlilik politikası, kullanım şartları ve Play Console Data Safety beyanı güncellenmelidir."
+            ],
+            "list": [
+              "Sosyal medya takip: isteğe bağlı dış bağlantı ve küçük tek seferlik oyun içi ödül.",
+              "Oyun içi para satın alma: Google Play Billing ürünü ve restore/entitlement kontrolü.",
+              "Ödüllü reklam: reklam SDK beyanı ve kasaya oranlı küçük destek.",
+              "Oyun içi metinler belediye desteği, hükümet yardımı, taraftar bağışı veya sponsor yatırım teklifi gibi bağlamlarla sunulabilir."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "transfer",
+        "title": "Transfer",
+        "lead": "Transfer kararları kadro kalitesi, maaş bütçesi ve takım dengesi birlikte okunarak verilmelidir.",
+        "sections": [
+          {
+            "heading": "Oyuncu alma ve satma",
+            "paragraphs": [
+              "Transfer pazarı sadece daha yüksek reyting aramak değildir. Yaş, maaş, mevki ihtiyacı ve kulüp bütçesi birlikte değerlendirilmelidir.",
+              "Satış kararları kısa vadede para yaratabilir, ancak dar kadro maç performansını ve taraftar güvenini zayıflatabilir."
+            ],
+            "list": [
+              "Önce eksik mevkileri belirle.",
+              "Yüksek maaşlı yaşlı oyuncuları risk olarak işaretle.",
+              "Tekliften önce maaş bütçesini kontrol et."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "stadyum-tesisler",
+        "title": "Stadyum ve tesisler",
+        "lead": "Stadyum ve tesis yatırımları kulübün gelirini, değerini ve uzun vadeli büyümesini etkiler.",
+        "sections": [
+          {
+            "heading": "Yatırım kararı",
+            "paragraphs": [
+              "Tribün, VIP alan, zemin ve ticari alan yatırımları ilk anda nakit çıkışı yaratır; doğru zamanda yapılırsa ilerleyen haftalarda kulüp değerini güçlendirir.",
+              "Süper Stadyum ileride uygulama içi satın alma veya oyun içi para ile açılacaksa, satın alan kullanıcı yeni kariyerde de talep edebilmelidir."
+            ],
+            "list": [
+              "Kasa güvenli değilken büyük yatırım yapma.",
+              "Gelir etkisi yüksek yatırımları sezon planına bağla.",
+              "Süper Stadyum sahipliğini kariyerden bağımsız ürün hakkı olarak takip et."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "mac-akisi",
+        "title": "Maç akışı",
+        "lead": "Maç ekranı hazırlık, canlı olaylar ve sonuç değerlendirmesi aşamalarından oluşur.",
+        "sections": [
+          {
+            "heading": "Maç günü",
+            "paragraphs": [
+              "Maç öncesi ekran, rakip ve takım durumunu hızlı okumak için kullanılır. Canlı akışta skor, olaylar ve istatistikler takip edilir.",
+              "Sonuç ekranı yalnızca skoru değil, performans sinyallerini ve sonraki hafta kararlarını da besler."
+            ],
+            "list": [
+              "Eksik veya yorgun oyuncuları maçtan önce kontrol et.",
+              "Canlı akışta olay temposunu ve kart riskini izle.",
+              "Sonuçtan sonra finans ve haber ekranlarını tekrar kontrol et."
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "sss",
+        "title": "Sık Sorulan Sorular",
+        "lead": "Kayıt, veri, reklam, satın alma ve mağaza yayını hakkında kısa cevaplar.",
+        "sections": [
+          {
+            "heading": "Veri ve satın alma",
+            "paragraphs": [
+              "Mevcut build'de hesap sistemi yoktur; kayıtlar cihazda tutulur.",
+              "Reklam ve uygulama içi satın alma SDK'ları eklenirse gizlilik politikası, kullanım şartları ve Data Safety beyanı güncellenmeden yayın kapanmamalıdır."
+            ],
+            "list": [
+              "Kayıtlar cihaz verisi silinirse kaybolabilir.",
+              "Tam sürüm gelecekte rewarded ads dışındaki reklamları kaldıracak şekilde tasarlanabilir.",
+              "Süper Stadyum sahipliği kariyerler arasında talep edilebilir ürün hakkı olmalıdır."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "store": {
+    "eyebrow": "Play Console paketi",
+    "title": "Mağaza metinleri ve Data Safety taslağı",
+    "lead": "Bu sayfa Play Console girişinde kullanılacak TR metinleri, görsel gereksinimleri ve mevcut build veri beyanını toplar.",
+    "cards": [
+      {
+        "kicker": "Başlık",
+        "title": "Büyük Başkan",
+        "paragraphs": [
+          "Kategori önerisi: Oyunlar > Spor veya Simülasyon.",
+          "Destek URL'si: https://huntertrgy.github.io/buyukbaskan/tr/"
+        ],
+        "list": [
+          "Kısa açıklama: Futbol kulübünü bütçe, transfer, stadyum ve taraftar baskısıyla yönet.",
+          "Tam açıklama: Büyük Başkan, kulübün yönetim masasını merkeze alan sezonluk futbol yönetim oyunudur. Kadroyu planla, transfer bütçesini koru, stadyum yatırımlarını zamanla ve haber akışındaki kararların kulübün güvenine nasıl yansıdığını takip et."
+        ]
+      },
+      {
+        "kicker": "Data Safety",
+        "title": "Mevcut build beyanı",
+        "paragraphs": [
+          "No user data collected by developer in current build.",
+          "Kariyer verileri cihazda IndexedDB ve localStorage üzerinde saklanır; geliştirici sunucusuna otomatik aktarım yoktur."
+        ],
+        "list": [
+          "Hesap yok.",
+          "Kişisel veri toplama yok.",
+          "Aktif reklam veya satın alma SDK'sı yok.",
+          "Android manifest izin yüzeyi: INTERNET."
+        ]
+      },
+      {
+        "kicker": "Monetizasyon planı",
+        "title": "Finans > Yatırım Al",
+        "paragraphs": [
+          "Gelecek sürümde Finans ekranı içinde Yatırım Al bölümü planlanabilir. Bu bölüm sosyal medya takip ödülü, rewarded ads, Google Play Billing ile oyun içi para paketi ve tam sürüm/Süper Stadyum tekliflerini tek kontrollü yüzeyde toplar.",
+          "Bu plan mevcut build beyanı değildir; Billing veya reklam SDK'sı eklenirse privacy, terms, Data Safety ve store metadata tekrar güncellenmeden release kapatılmamalıdır."
+        ],
+        "list": [
+          "Dijital oyun içi para paketleri Google Play Billing ile satılmalıdır.",
+          "Sosyal medya takip görevleri isteğe bağlı dış bağlantı olarak kalmalıdır.",
+          "Rewarded ads desteği reklam sağlayıcı veri kullanımını ayrıca beyan etmelidir.",
+          "Nakit destekleri günlük/haftalık limit, kasa sağlığı kontrolü ve küçük tek seferlik ödül kurallarıyla dengelenmelidir.",
+          "Billing restore, iade/iptal, tekrar grant ve yeni kariyerde Süper Stadyum claim davranışı test edilmelidir.",
+          "Tam sürüm rewarded ads hariç diğer reklamları kaldıracaksa kapsam mağaza metninde açık yazılmalıdır."
+        ]
+      },
+      {
+        "kicker": "Görseller",
+        "title": "Play Console asset listesi",
+        "paragraphs": [
+          "512x512 PNG app icon, 1024x500 feature graphic ve 6 adet Android phone screenshot hazırlanır.",
+          "Screenshot hedefi 1080x1920 9:16, 24-bit PNG ve alfa kanalsızdır."
+        ],
+        "list": [
+          "Summary",
+          "News",
+          "Squad",
+          "Transfer",
+          "Stadium veya Finance",
+          "Match result"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Yayın öncesi güncelleme şartı",
+        "paragraphs": [
+          "AdMob, Google Play Billing, analitik veya başka üçüncü taraf SDK eklenirse bu sayfadaki gizlilik, şartlar ve Data Safety metinleri tekrar güncellenmeden release kapatılmamalıdır."
+        ],
+        "list": [
+          "Gizlilik URL'si: https://huntertrgy.github.io/buyukbaskan/tr/privacy/",
+          "Şartlar URL'si: https://huntertrgy.github.io/buyukbaskan/tr/terms/",
+          "Wiki URL'si: https://huntertrgy.github.io/buyukbaskan/tr/wiki/",
+          "Google Play Payments policy: https://support.google.com/googleplay/android-developer/answer/9858738",
+          "Google Play Data Safety: https://support.google.com/googleplay/android-developer/answer/10787469",
+          "Google Play User Data policy: https://support.google.com/googleplay/android-developer/answer/10144311"
+        ]
+      }
+    ]
+  }
+}

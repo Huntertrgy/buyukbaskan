@@ -1,0 +1,5 @@
+/dist/
+!/public/
+!/public/assets/
+!/public/assets/play-console/
+!/public/assets/play-console/**/*.png
