@@ -23,6 +23,12 @@
     "title": "Run the club through data, budget pressure, and supporters.",
     "lead": "Büyük Başkan focuses on the club decision desk, not touchline button play. Squad planning, finance, stadium work, news, and board trust move through one career loop.",
     "heroAlt": "Büyük Başkan store graphic",
+    "screenshotsLabel": "Real game screenshots",
+    "screenshots": [
+      { "file": "01-summary.png", "alt": "Büyük Başkan summary screen" },
+      { "file": "02-news.png", "alt": "Büyük Başkan news screen" },
+      { "file": "05-finance.png", "alt": "Büyük Başkan finance screen" }
+    ],
     "actions": [
       { "label": "Open Wiki", "href": "wiki/" },
       { "label": "Privacy Policy", "href": "privacy/" },
@@ -38,7 +44,7 @@
         "heading": "What does the player do?",
         "paragraphs": [
           "The player acts as club chairman, managing targets, budget, staff, and sporting decisions. The game focuses on the long-term effect of decisions across a season.",
-          "Career saves and preferences stay on the device in the current build; there is no online account system or automatic career-data upload to a developer server."
+          "Career saves and preferences stay on the device by default; there is no Büyük Başkan account or automatic career-data upload to a developer server. Optional Play Games cloud save can run through Google services."
         ],
         "list": [
           "Squad and transfer decisions",
@@ -58,13 +64,14 @@
       {
         "heading": "Short summary",
         "paragraphs": [
-          "Büyük Başkan does not create user accounts, does not send personal data to a developer server, and does not store career saves outside the device in the current build.",
-          "Game saves, preferences, and chairman profile choices are stored in local device storage. Removing the app or clearing app data may remove those local records."
+          "Büyük Başkan does not create its own user account and does not send personal data to a developer server. The Android build may use optional Google Play Games integration for cloud saves and achievements through Google services.",
+          "Game saves, preferences, and chairman profile choices are stored in local device storage by default. If Play Games cloud save is used, the selected career data may be written to Google Play Games Saved Games."
         ],
         "list": [
-          "No account system.",
+          "No separate Büyük Başkan account system.",
           "No automatic personal-data transfer to the developer.",
-          "Career data stays on the device.",
+          "Career data stays on the device by default.",
+          "Play Games cloud save and achievements run through optional Google services.",
           "The current Android manifest surface includes the INTERNET permission."
         ]
       },
@@ -72,13 +79,14 @@
         "heading": "Data stored on the device",
         "paragraphs": [
           "The app may store game progress, team preferences, audio and presentation settings, career saves, and similar game state in device-local storage such as IndexedDB and localStorage.",
-          "This data is used to run the game. The developer does not automatically receive it."
+          "This data is used to run the game. The developer does not automatically receive it. If Play Games cloud save is selected, a career save envelope may be sent to Google Play Games infrastructure."
         ],
         "list": [
           "Career progress and club state",
           "Save slots",
           "Language, audio, and display preferences",
-          "Chairman name, club name, stadium name, and in-game choices"
+          "Chairman name, club name, stadium name, and in-game choices",
+          "Optional Play Games cloud save and achievement state"
         ]
       },
       {
@@ -302,11 +310,11 @@
           {
             "heading": "Data and purchases",
             "paragraphs": [
-              "There is no account system in the current build; saves are stored on the device.",
+              "There is no Büyük Başkan account in the current build; saves are stored on the device by default. Optional Play Games cloud save can run through Google services.",
               "If ads and in-app purchase SDKs are added, the privacy policy, terms, and Data Safety declaration must be updated before release closure."
             ],
             "list": [
-              "Saves can be lost if device app data is removed.",
+              "Saves can be lost if device app data is removed; if Play Games cloud save is selected, the Google account and service terms apply.",
               "A future full version may remove ads except rewarded ads.",
               "Super Stadium ownership should be claimable across careers."
             ]
@@ -337,11 +345,12 @@
         "title": "Current build declaration",
         "paragraphs": [
           "No user data collected by developer in current build.",
-          "Career data is stored on the device through IndexedDB and localStorage; there is no automatic transfer to a developer server."
+          "Career data is stored on the device through IndexedDB and localStorage by default; there is no automatic transfer to a developer server. Optional Play Games cloud save runs through Google services."
         ],
         "list": [
-          "No account.",
+          "No Büyük Başkan account.",
           "No personal data collection.",
+          "Optional Play Games cloud save and achievements run through Google services.",
           "No active ads or purchase SDK.",
           "Android manifest permission surface: INTERNET."
         ]
