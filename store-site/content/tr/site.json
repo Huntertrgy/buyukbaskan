@@ -23,6 +23,12 @@
     "title": "Kulübü veri, bütçe ve taraftar baskısıyla yönet.",
     "lead": "Büyük Başkan sahadaki düğmelere değil kulübün karar masasına odaklanır. Kadro, finans, stadyum, haber akışı ve yönetim güveni tek kariyer döngüsünde birleşir.",
     "heroAlt": "Büyük Başkan mağaza görseli",
+    "screenshotsLabel": "Gerçek oyun ekran görüntüleri",
+    "screenshots": [
+      { "file": "01-summary.png", "alt": "Büyük Başkan özet ekranı" },
+      { "file": "02-news.png", "alt": "Büyük Başkan haber ekranı" },
+      { "file": "05-finance.png", "alt": "Büyük Başkan finans ekranı" }
+    ],
     "actions": [
       { "label": "Wiki'yi aç", "href": "wiki/" },
       { "label": "Gizlilik metni", "href": "privacy/" },
@@ -38,7 +44,7 @@
         "heading": "Oyuncu ne yapar?",
         "paragraphs": [
           "Oyuncu başkan rolünde kulüp hedeflerini, bütçeyi, teknik ekibi ve sportif kararları yönetir. Oyun, tek bir maç aksiyonundan çok sezon boyunca verilen kararların toplam etkisine odaklanır.",
-          "Kariyer kayıtları ve tercihler mevcut build'de cihaz üzerinde saklanır; çevrim içi hesap sistemi veya geliştirici sunucusuna kayıt gönderimi yoktur."
+          "Kariyer kayıtları ve tercihler varsayılan olarak cihaz üzerinde saklanır; Büyük Başkan hesabı veya geliştirici sunucusuna otomatik kayıt gönderimi yoktur. İsteğe bağlı Play Games bulut kaydı Google hizmetleri üzerinden çalışabilir."
         ],
         "list": [
           "Kadro ve transfer kararları",
@@ -58,13 +64,14 @@
       {
         "heading": "Kısa özet",
         "paragraphs": [
-          "Büyük Başkan mevcut build'de kullanıcı hesabı açmaz, geliştirici sunucusuna kişisel veri göndermez ve oyuncunun kariyer kayıtlarını cihaz dışında saklamaz.",
-          "Oyun kayıtları, tercihleri ve başkan profili cihaz üzerindeki yerel depolama alanlarında tutulur. Uygulamayı silmek veya oyun verisini sıfırlamak bu yerel verileri kaldırabilir."
+          "Büyük Başkan kendi kullanıcı hesabı açmaz ve geliştirici sunucusuna kişisel veri göndermez. Android build'de isteğe bağlı Google Play Games entegrasyonu kariyer bulut kaydı ve başarımlar için Google hizmetlerini kullanabilir.",
+          "Oyun kayıtları, tercihleri ve başkan profili varsayılan olarak cihaz üzerindeki yerel depolama alanlarında tutulur. Play Games bulut kaydı kullanılırsa seçilen kariyer verisi Google Play Games Saved Games alanına yazılabilir."
         ],
         "list": [
-          "Hesap sistemi yoktur.",
+          "Büyük Başkan içinde ayrı hesap sistemi yoktur.",
           "Geliştiriciye otomatik kişisel veri aktarımı yoktur.",
-          "Kariyer verileri cihaz içinde kalır.",
+          "Kariyer verileri varsayılan olarak cihaz içinde kalır.",
+          "Play Games bulut kaydı ve başarımlar isteğe bağlı Google hizmetleri üzerinden çalışır.",
           "Android manifestinde mevcut izin yüzeyi INTERNET iznidir."
         ]
       },
@@ -72,13 +79,14 @@
         "heading": "Cihazda saklanan veriler",
         "paragraphs": [
           "Uygulama oyun ilerlemesini, takım tercihlerini, ses ve sunum ayarlarını, kariyer kayıtlarını ve benzer oyun içi durumları IndexedDB ve localStorage gibi cihaz yerel depolama alanlarında saklayabilir.",
-          "Bu veriler oyunun çalışması için kullanılır. Geliştirici bu verileri otomatik olarak almaz."
+          "Bu veriler oyunun çalışması için kullanılır. Geliştirici bu verileri otomatik olarak almaz. Play Games bulut kaydı seçilirse kariyer kayıt zarfı Google Play Games altyapısına gönderilebilir."
         ],
         "list": [
           "Kariyer ilerlemesi ve kulüp durumu",
           "Kayıt slotları",
           "Dil, ses ve sunum tercihleri",
-          "Başkan adı, kulüp adı, stadyum adı ve oyun içi seçimler"
+          "Başkan adı, kulüp adı, stadyum adı ve oyun içi seçimler",
+          "İsteğe bağlı Play Games bulut kaydı ve başarım durumu"
         ]
       },
       {
@@ -302,11 +310,11 @@
           {
             "heading": "Veri ve satın alma",
             "paragraphs": [
-              "Mevcut build'de hesap sistemi yoktur; kayıtlar cihazda tutulur.",
+              "Mevcut build'de Büyük Başkan hesabı yoktur; kayıtlar varsayılan olarak cihazda tutulur. İsteğe bağlı Play Games bulut kaydı Google hizmetleri üzerinden çalışabilir.",
               "Reklam ve uygulama içi satın alma SDK'ları eklenirse gizlilik politikası, kullanım şartları ve Data Safety beyanı güncellenmeden yayın kapanmamalıdır."
             ],
             "list": [
-              "Kayıtlar cihaz verisi silinirse kaybolabilir.",
+              "Kayıtlar cihaz verisi silinirse kaybolabilir; Play Games bulut kaydı seçilirse Google hesabı ve hizmet koşulları geçerlidir.",
               "Tam sürüm gelecekte rewarded ads dışındaki reklamları kaldıracak şekilde tasarlanabilir.",
               "Süper Stadyum sahipliği kariyerler arasında talep edilebilir ürün hakkı olmalıdır."
             ]
@@ -336,12 +344,13 @@
         "kicker": "Data Safety",
         "title": "Mevcut build beyanı",
         "paragraphs": [
-          "No user data collected by developer in current build.",
-          "Kariyer verileri cihazda IndexedDB ve localStorage üzerinde saklanır; geliştirici sunucusuna otomatik aktarım yoktur."
+          "Mevcut build'de geliştirici tarafından toplanan kullanıcı verisi yoktur.",
+          "Kariyer verileri varsayılan olarak cihazda IndexedDB ve localStorage üzerinde saklanır; geliştirici sunucusuna otomatik aktarım yoktur. İsteğe bağlı Play Games bulut kaydı Google hizmetleri üzerinden çalışır."
         ],
         "list": [
-          "Hesap yok.",
-          "Kişisel veri toplama yok.",
+          "Büyük Başkan hesabı yok.",
+          "Geliştirici tarafından kişisel veri toplama yok.",
+          "İsteğe bağlı Play Games bulut kaydı ve başarımlar Google hizmetleri üzerinden çalışır.",
           "Aktif reklam veya satın alma SDK'sı yok.",
           "Android manifest izin yüzeyi: INTERNET."
         ]
