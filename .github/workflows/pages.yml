@@ -1,18 +1,6 @@
 name: Validate Store Site
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/pages.yml'
-      - 'store-site/**'
-      - 'site-runtime.js'
-      - 'index.html'
-      - 'tr/**'
-      - 'en/**'
-      - 'robots.txt'
-      - 'sitemap.xml'
   workflow_dispatch:
 
 permissions:
