@@ -21,53 +21,13 @@ function escapeHtml(value) {
     .replaceAll("'", '&#39;');
 }
 
-function svgDataUrl(svg) {
-  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-}
-
-function appMarkSvg(className = 'brand-mark') {
-  const classAttribute = className ? ` class="${className}"` : '';
-  return `<svg${classAttribute} viewBox="0 0 512 512" role="img" aria-label="Büyük Başkan">
-    <rect width="512" height="512" rx="84" fill="#07101a"/>
-    <path d="M72 346 C 142 300 216 354 284 314 C 348 276 408 294 452 244 L452 432 L72 432 Z" fill="#0d5b37"/>
-    <path d="M94 360 C 160 324 224 364 292 328 C 362 292 400 304 432 274" fill="none" stroke="#55d9ff" stroke-width="10" stroke-linecap="round"/>
-    <rect x="122" y="88" width="268" height="236" rx="28" fill="#102031" stroke="#55d9ff" stroke-opacity="0.42" stroke-width="6"/>
-    <path d="M176 286 h160 M176 238 h160 M176 190 h160" stroke="#9fb6c9" stroke-width="16" stroke-linecap="round"/>
-    <circle cx="256" cy="148" r="44" fill="none" stroke="#79ff68" stroke-width="14"/>
-    <path d="M256 100 v96 M208 148 h96" stroke="#f4d66f" stroke-width="8" stroke-linecap="round"/>
-  </svg>`;
-}
-
-function heroArtSvg(content) {
-  return `<svg class="hero-art" viewBox="0 0 1024 500" role="img" aria-label="${escapeHtml(content.home.heroAlt)}">
-    <defs>
-      <linearGradient id="hero-bg-${content.locale}" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#081827"/>
-        <stop offset="0.62" stop-color="#102a40"/>
-        <stop offset="1" stop-color="#08121f"/>
-      </linearGradient>
-      <linearGradient id="hero-line-${content.locale}" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#55d9ff"/>
-        <stop offset="1" stop-color="#79ff68"/>
-      </linearGradient>
-    </defs>
-    <rect width="1024" height="500" fill="url(#hero-bg-${content.locale})"/>
-    <path d="M0 380 C 164 304 312 430 500 354 C 698 276 812 318 1024 232 L1024 500 L0 500 Z" fill="#0b3d26" opacity="0.86"/>
-    <path d="M54 404 C 214 344 326 432 512 368 C 728 294 820 334 972 284" fill="none" stroke="url(#hero-line-${content.locale})" stroke-width="5" stroke-linecap="round" opacity="0.72"/>
-    <rect x="652" y="68" width="270" height="324" rx="26" fill="#07101a" stroke="#55d9ff" stroke-opacity="0.34" stroke-width="3"/>
-    <rect x="686" y="106" width="202" height="130" rx="14" fill="#12304a" stroke="#ffffff" stroke-opacity="0.14"/>
-    <circle cx="787" cy="171" r="38" fill="none" stroke="#79ff68" stroke-width="6" opacity="0.78"/>
-    <path d="M724 262 h88 M724 302 h150 M724 342 h118" stroke-linecap="round" stroke-width="22" opacity="0.74" stroke="#55d9ff"/>
-    <path d="M724 302 h150 M724 342 h118" stroke-linecap="round" stroke-width="22" opacity="0.52" stroke="#79ff68"/>
-    <text x="72" y="190" fill="#eef8ff" font-family="Segoe UI, Arial, sans-serif" font-size="68" font-weight="900">${escapeHtml(content.brand)}</text>
-    <text x="76" y="252" fill="#9fb6c9" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">${escapeHtml(content.home.lead)}</text>
-    <path d="M78 326 h420" stroke="#f4d66f" stroke-width="4" opacity="0.78"/>
-  </svg>`;
-}
-
 function sitePath(path = '') {
   const relative = String(path ?? '').replace(/^\/+/, '');
   return `${githubPagesBasePath}${relative}`.replace(/\/+/g, '/');
+}
+
+function playConsoleAsset(path) {
+  return sitePath(`assets/play-console/${path}`);
 }
 
 function pageUrl(locale, path = '') {
@@ -79,6 +39,35 @@ function link(locale, href) {
   if (href.startsWith('http')) return href;
   if (href === '/') return pageUrl(locale);
   return pageUrl(locale, href);
+}
+
+const wikiSlugMirrors = {
+  tr: {
+    baslangic: 'getting-started',
+    kariyer: 'career',
+    finans: 'finance',
+    transfer: 'transfers',
+    'stadyum-tesisler': 'stadium-facilities',
+    'mac-akisi': 'match-flow',
+    sss: 'faq',
+  },
+  en: {
+    'getting-started': 'baslangic',
+    career: 'kariyer',
+    finance: 'finans',
+    transfers: 'transfer',
+    'stadium-facilities': 'stadyum-tesisler',
+    'match-flow': 'mac-akisi',
+    faq: 'sss',
+  },
+};
+
+function alternatePathForLocale(locale, activePath) {
+  const normalized = activePath === '/' ? '' : String(activePath ?? '').replace(/^\/+|\/+$/g, '');
+  const wikiMatch = normalized.match(/^wiki\/([^/]+)$/);
+  if (!wikiMatch) return normalized ? `${normalized}/` : '';
+  const mirroredSlug = wikiSlugMirrors[locale]?.[wikiMatch[1]] ?? wikiMatch[1];
+  return `wiki/${mirroredSlug}/`;
 }
 
 function navItems(content, activePath) {
@@ -131,8 +120,22 @@ function renderMetadata(store) {
   `).join('')}</div>`;
 }
 
+function heroVisual(content) {
+  const featureGraphic = playConsoleAsset(`feature-graphic-${content.locale}-1024x500.png`);
+  const screenshots = content.home.screenshots ?? [];
+  return `<div class="hero__visual">
+    <img class="hero-feature" src="${featureGraphic}" alt="${escapeHtml(content.home.heroAlt)}" width="1024" height="500" loading="eager">
+    ${screenshots.length ? `<div class="screenshot-rail" aria-label="${escapeHtml(content.home.screenshotsLabel)}">
+      ${screenshots.map((shot) => `
+        <img src="${playConsoleAsset(`screenshots/android-phone/${shot.file}`)}" alt="${escapeHtml(shot.alt)}" width="1080" height="1920" loading="lazy">
+      `).join('')}
+    </div>` : ''}
+  </div>`;
+}
+
 function layout(content, activePath, title, body, pageClass = '') {
-  const languageHref = content.locale === 'tr' ? pageUrl('en') : pageUrl('tr');
+  const otherLocale = content.locale === 'tr' ? 'en' : 'tr';
+  const languageHref = pageUrl(otherLocale, alternatePathForLocale(content.locale, activePath));
   const description = content.home.lead;
   return `<!doctype html>
 <html lang="${content.htmlLang}">
@@ -142,8 +145,8 @@ function layout(content, activePath, title, body, pageClass = '') {
     <title>${escapeHtml(title)} | ${escapeHtml(content.brand)}</title>
     <meta name="description" content="${escapeHtml(description)}">
     <link rel="canonical" href="${siteOrigin}${pageUrl(content.locale, activePath === '/' ? '' : activePath)}">
-    <link rel="alternate" hreflang="${content.locale === 'tr' ? 'en' : 'tr'}" href="${siteOrigin}${languageHref}">
-    <link rel="icon" href="${svgDataUrl(appMarkSvg(''))}">
+    <link rel="alternate" hreflang="${otherLocale}" href="${siteOrigin}${languageHref}">
+    <link rel="icon" href="${playConsoleAsset('app-icon-512.png')}">
     <link rel="stylesheet" href="${sitePath('assets/site.css')}">
   </head>
   <body>
@@ -151,7 +154,7 @@ function layout(content, activePath, title, body, pageClass = '') {
       <header class="site-header">
         <div class="site-header__inner">
           <a class="brand-lockup" href="${pageUrl(content.locale)}">
-            ${appMarkSvg()}
+            <img class="brand-mark" src="${playConsoleAsset('app-icon-512.png')}" alt="" width="42" height="42" aria-hidden="true">
             <span>
               <strong>${escapeHtml(content.brand)}</strong>
               <span>${escapeHtml(content.nav.brandMeta)}</span>
@@ -194,9 +197,7 @@ function homePage(content) {
           ${content.home.actions.map((action, index) => `<a class="button ${index === 0 ? 'button--primary' : ''}" href="${link(content.locale, action.href)}">${escapeHtml(action.label)}</a>`).join('')}
         </div>
       </div>
-      <div class="hero__visual">
-        ${heroArtSvg(content)}
-      </div>
+      ${heroVisual(content)}
     </section>
     <div class="stack">
       ${renderCards(content.home.cards, content.locale)}
