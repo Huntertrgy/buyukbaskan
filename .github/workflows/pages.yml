@@ -1,4 +1,4 @@
-name: Publish Store Site
+name: Validate Store Site
 
 on:
   push:
@@ -7,16 +7,16 @@ on:
     paths:
       - '.github/workflows/pages.yml'
       - 'store-site/**'
+      - 'site-runtime.js'
+      - 'index.html'
+      - 'tr/**'
+      - 'en/**'
+      - 'robots.txt'
+      - 'sitemap.xml'
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
   build:
@@ -25,24 +25,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Build static site
         run: node store-site/build.mjs
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: store-site/dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Verify branch-root fallback
+        run: |
+          test -f index.html
+          test -f tr/privacy/index.html
+          test -f en/privacy/index.html
+          test -f site-runtime.js
