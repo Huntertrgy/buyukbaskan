@@ -58,48 +58,66 @@
   },
   "privacy": {
     "title": "Gizlilik Politikası",
-    "updatedLabel": "Son güncelleme: 2 Haziran 2026",
+    "updatedLabel": "Son güncelleme: 20 Ekim 2026",
     "lead": "Bu politika Büyük Başkan uygulamasının mevcut yayın build'inde veriyi nasıl işlediğini açıklar.",
     "sections": [
       {
         "heading": "Kısa özet",
         "paragraphs": [
-          "Büyük Başkan kendi kullanıcı hesabı açmaz ve geliştirici sunucusuna kişisel veri göndermez. Android build'de isteğe bağlı Google Play Games entegrasyonu kariyer bulut kaydı ve başarımlar için Google hizmetlerini kullanabilir.",
-          "Oyun kayıtları, tercihleri ve başkan profili varsayılan olarak cihaz üzerindeki yerel depolama alanlarında tutulur. Play Games bulut kaydı kullanılırsa seçilen kariyer verisi Google Play Games Saved Games alanına yazılabilir."
+          "Büyük Başkan kendi kullanıcı hesabı açmaz ve geliştirici sunucusuna kişisel veri göndermez. Kariyer kayıtları ve başarımlar yalnızca cihazda saklanır. Android build'de isteğe bağlı Google Play Billing ve AdMob kullanılabilir.",
+          "Oyun kayıtları, tercihler, başkan profili ve başarım ilerlemesi yalnızca cihaz üzerindeki yerel depolama alanlarında tutulur."
         ],
         "list": [
           "Büyük Başkan içinde ayrı hesap sistemi yoktur.",
           "Geliştiriciye otomatik kişisel veri aktarımı yoktur.",
-          "Kariyer verileri varsayılan olarak cihaz içinde kalır.",
-          "Play Games bulut kaydı ve başarımlar isteğe bağlı Google hizmetleri üzerinden çalışır.",
-          "Android manifestinde mevcut izin yüzeyi INTERNET iznidir."
+          "Kariyer kayıtları ve başarımlar yalnızca cihazda yerel olarak saklanır; bulut kaydı yoktur.",
+          "Android build'de isteğe bağlı Google Play Billing ve AdMob kullanılabilir.",
+          "Android manifestinde mevcut izin yüzeyi: INTERNET ve AD_ID."
         ]
       },
       {
         "heading": "Cihazda saklanan veriler",
         "paragraphs": [
           "Uygulama oyun ilerlemesini, takım tercihlerini, ses ve sunum ayarlarını, kariyer kayıtlarını ve benzer oyun içi durumları IndexedDB ve localStorage gibi cihaz yerel depolama alanlarında saklayabilir.",
-          "Bu veriler oyunun çalışması için kullanılır. Geliştirici bu verileri otomatik olarak almaz. Play Games bulut kaydı seçilirse kariyer kayıt zarfı Google Play Games altyapısına gönderilebilir."
+          "Bu veriler oyunun çalışması için kullanılır. Geliştirici bu verileri otomatik olarak almaz. Tüm kayıt ve başarım verileri cihazda kalır."
         ],
         "list": [
           "Kariyer ilerlemesi ve kulüp durumu",
           "Kayıt slotları",
           "Dil, ses ve sunum tercihleri",
           "Başkan adı, kulüp adı, stadyum adı ve oyun içi seçimler",
-          "İsteğe bağlı Play Games bulut kaydı ve başarım durumu"
+          "Başarım ilerlemesi (yalnızca cihazda yerel)"
         ]
       },
       {
-        "heading": "Reklam, satın alma ve gelecek SDK'lar",
+        "heading": "Reklam ve satın alma",
         "paragraphs": [
-          "Mevcut build'de aktif AdMob veya Google Play Billing SDK entegrasyonu görünmediği için bu politika mevcut veri akışını esas alır.",
-          "Reklam, ödüllü reklam, uygulama içi satın alma veya analitik SDK'sı eklenirse bu politika, kullanım şartları ve Play Console Data Safety beyanı yayın öncesinde yeniden güncellenmelidir."
+          "Android build'de yalnızca Google AdMob ödüllü videoları vardır ve yalnızca Finans > Yatırım Al ekranından sen başlatınca açılır (sezonda en fazla 10). Geçiş (ara) reklamı yoktur.",
+          "AdMob; reklam kimliği, cihaz tanımlayıcıları, IP adresi ve uygulama etkileşimi gibi verileri Google tarafında reklam sunumu, ölçüm ve dolandırıcılık önleme için işleyebilir. Geliştirici bu reklam verilerini kendi sunucusuna otomatik aktarmaz.",
+          "Uygulama içi satın almalar (üç yatırımcı para paketi ve Süper Stadyum), ürünler Play Console'da aktif olunca Google Play Billing üzerinden çalışır.",
+          "Reklam izni: Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'de ya da Google'ın izin istediği başka bir bölgedeysen, uygulama açılışta Google'ın izin formunu (User Messaging Platform) gösterir. Reklam verisinin kişiselleştirilmiş reklam için kullanılıp kullanılmayacağını orada seçersin. İzin vermezsen ödüllü videolar sınırlı, kişiselleştirilmemiş reklamlarla sunulabilir. İzin sorusuna yanıt alınamazsa (örneğin bağlantı yoksa) ödüllü video açılmaz.",
+          "Seçimini istediğin zaman Ayarlar > Reklam gizlilik seçenekleri'nden değiştirebilir ya da geri çekebilirsin. Bu satır yalnızca Google izin formunu gerektirdiğinde görünür; formun gerekmediği bölgelerde kişiselleştirilmiş reklam tercihini cihazının Google reklam ayarlarından yönetebilirsin."
         ],
         "list": [
-          "Rewarded ads eklenirse reklam sağlayıcısının veri kullanımı ayrıca açıklanmalıdır.",
-          "Billing eklenirse satın alma işlemleri Google Play tarafından işlenir.",
-          "Tam sürüm, Süper Stadyum veya oyun içi para paketleri etkinleşmeden önce mağaza beyanları yenilenmelidir.",
-          "Sosyal medya takip teklifleri eklenirse kullanıcı isteğe bağlı dış platform yönlendirmesini açıkça görmelidir."
+          "AdMob sağlayıcısı: Google LLC / Google Ireland Limited.",
+          "Reklam izni Google'ın izin formuyla alınır ve Ayarlar > Reklam gizlilik seçenekleri'nden değiştirilir.",
+          "Ödüllü reklam izleme tamamen isteğe bağlıdır.",
+          "Reklam verisi işleme ayrıntıları için Google AdMob gizlilik politikası geçerlidir.",
+          "Billing aktifleşince satın almalar Google Play ödeme sistemi üzerinden işlenir.",
+          "Oyun içi para paketleri yalnızca simülasyon bakiyesi sağlar.",
+          "Sosyal medya takip ya da paylaşım ödülü yoktur."
+        ]
+      },
+      {
+        "heading": "Hata raporları (isteğe bağlı)",
+        "paragraphs": [
+          "Ayarlar > Hata raporları gönder varsayılan olarak kapalıdır ve yalnızca hata raporlaması yapılandırılmış build'lerde görünür. Açarsan uygulama çöktüğünde bir hata kaydı ve oturum sayısı Sentry'ye şifreli bağlantıyla gönderilir.",
+          "Hata kaydında hata adı, sayı ve tırnak içi metinleri silinmiş hata mesajı, yığın izi, uygulama sürümü ve kimlikleri çıkarılmış ekran yolu bulunur. Cihaz modeli ve işletim sistemi sürümü gibi teknik cihaz bilgileri de eklenebilir. Kişisel veri, başkan, kulüp ya da oyuncu adı ve kayıt verisi gönderilmez."
+        ],
+        "list": [
+          "Hata raporu sağlayıcısı: Sentry (Functional Software, Inc.).",
+          "Anahtarı kapatınca gönderim hemen durur.",
+          "Hata raporları reklam ya da takip için kullanılmaz."
         ]
       },
       {

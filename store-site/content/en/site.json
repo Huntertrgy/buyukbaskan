@@ -58,48 +58,66 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "updatedLabel": "Last updated: June 2, 2026",
+    "updatedLabel": "Last updated: October 20, 2026",
     "lead": "This policy explains how the current release build of Büyük Başkan handles data.",
     "sections": [
       {
         "heading": "Short summary",
         "paragraphs": [
-          "Büyük Başkan does not create its own user account and does not send personal data to a developer server. The Android build may use optional Google Play Games integration for cloud saves and achievements through Google services.",
-          "Game saves, preferences, and chairman profile choices are stored in local device storage by default. If Play Games cloud save is used, the selected career data may be written to Google Play Games Saved Games."
+          "Büyük Başkan does not create its own user account and does not send personal data to a developer server. Career saves and achievements stay on the device only. The Android build may optionally use Google Play Billing and AdMob.",
+          "Game saves, preferences, chairman profile choices, and achievement progress are stored in local device storage only."
         ],
         "list": [
           "No separate Büyük Başkan account system.",
           "No automatic personal-data transfer to the developer.",
-          "Career data stays on the device by default.",
-          "Play Games cloud save and achievements run through optional Google services.",
-          "The current Android manifest surface includes the INTERNET permission."
+          "Career saves and achievements are stored locally on the device only; there is no cloud save.",
+          "The Android build may optionally use Google Play Billing and AdMob.",
+          "The current Android manifest surface includes INTERNET and AD_ID permissions."
         ]
       },
       {
         "heading": "Data stored on the device",
         "paragraphs": [
           "The app may store game progress, team preferences, audio and presentation settings, career saves, and similar game state in device-local storage such as IndexedDB and localStorage.",
-          "This data is used to run the game. The developer does not automatically receive it. If Play Games cloud save is selected, a career save envelope may be sent to Google Play Games infrastructure."
+          "This data is used to run the game. The developer does not automatically receive it. All save and achievement data remains on the device."
         ],
         "list": [
           "Career progress and club state",
           "Save slots",
           "Language, audio, and display preferences",
           "Chairman name, club name, stadium name, and in-game choices",
-          "Optional Play Games cloud save and achievement state"
+          "Achievement progress (device-local only)"
         ]
       },
       {
-        "heading": "Ads, purchases, and future SDKs",
+        "heading": "Ads and purchases",
         "paragraphs": [
-          "No active AdMob or Google Play Billing SDK integration is visible in the current build, so this policy describes the current data flow.",
-          "If ads, rewarded ads, in-app purchases, or analytics SDKs are added, this policy, the terms, and the Play Console Data Safety declaration must be updated before release."
+          "The Android build shows Google AdMob rewarded videos only, and only when you start one from Finance > Get Investment (up to 10 a season). There are no interstitial ads.",
+          "AdMob may process advertising ID, device identifiers, IP address, and app interaction data on Google's side for ad delivery, measurement, and fraud prevention. The developer does not automatically transfer this ad data to its own servers.",
+          "In-app purchases (three investor cash packs and the Super Stadium) run through Google Play Billing once the products are active in Play Console.",
+          "Ad consent: if you are in the European Economic Area, the UK or Switzerland, or another region where Google asks for consent, the app shows Google's consent form (User Messaging Platform) at start-up. There you choose whether ad data may be used for personalised ads. If you do not consent, rewarded videos may be served with limited, non-personalised ads. If no consent answer can be obtained (for example offline), no rewarded video opens.",
+          "You can change or withdraw your choice at any time in Settings > Ad privacy options. That entry appears only when Google requires the consent form; where it is not required, manage personalised ads in your device's Google ad settings."
         ],
         "list": [
-          "Rewarded ads must disclose the ad provider's data use.",
-          "Billing purchases are processed through Google Play.",
-          "Full version, Super Stadium, or in-game cash pack purchases must not ship before store declarations are refreshed.",
-          "Social follow offers must clearly show the optional external-platform handoff before the user leaves the app."
+          "Ad provider: Google LLC / Google Ireland Limited.",
+          "Ad consent is collected with Google's consent form and changed in Settings > Ad privacy options.",
+          "Rewarded ad viewing is fully optional.",
+          "See Google AdMob privacy policy for ad data processing details.",
+          "When Billing is enabled, purchases run through Google Play.",
+          "In-game cash packs only affect the simulation balance.",
+          "There are no social follow or share rewards."
+        ]
+      },
+      {
+        "heading": "Crash reports (optional)",
+        "paragraphs": [
+          "Settings > Send crash reports is off by default and appears only in builds with crash reporting configured. When you switch it on, a crash record and session counts are sent to Sentry over an encrypted connection when the app crashes.",
+          "A crash record holds the error name, the error message with numbers and quoted text removed, the stack trace, the app version and the screen path with ids removed. Technical device details such as the device model and OS version may be added. No personal data, no chairman, club or player names and no save data are sent."
+        ],
+        "list": [
+          "Crash report provider: Sentry (Functional Software, Inc.).",
+          "Switching it off stops sending at once.",
+          "Crash reports are not used for advertising or tracking."
         ]
       },
       {
