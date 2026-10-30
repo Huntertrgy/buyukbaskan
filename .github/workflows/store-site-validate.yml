@@ -1,0 +1,22 @@
+name: Validate Store Site
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify static site
+        run: |
+          test -f index.html
+          for l in tr en de es fr pt-BR; do
+            test -f "$l/privacy/index.html"
+            test -f "$l/terms/index.html"
+          done
