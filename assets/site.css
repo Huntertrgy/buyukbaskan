@@ -362,6 +362,8 @@ p {
 
 .screenshot-rail img {
   width: 100%;
+  /* The tag's height="1920" would otherwise win over aspect-ratio and crop a tall strip. */
+  height: auto;
   min-width: 0;
   aspect-ratio: 9 / 16;
   border: 1px solid rgba(85, 217, 255, 0.22);
@@ -374,6 +376,7 @@ p {
 
 .hero-feature {
   width: 100%;
+  height: auto;
   aspect-ratio: 1024 / 500;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
