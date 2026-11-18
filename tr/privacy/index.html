@@ -41,7 +41,7 @@
       <main class="site-main">
         
     <section class="panel">
-      <span class="eyebrow">Son güncelleme: 20 Ekim 2026</span>
+      <span class="eyebrow">Son güncelleme: 12 Kasım 2026</span>
       <h1>Gizlilik Politikası</h1>
       <p class="lead">Bu politika Büyük Başkan uygulamasının mevcut yayın build&#39;inde veriyi nasıl işlediğini açıklar.</p>
     </section>
@@ -49,40 +49,46 @@
       
     <section class="panel">
       <h2>Kısa özet</h2>
-      <p>Büyük Başkan kendi kullanıcı hesabı açmaz ve geliştirici sunucusuna kişisel veri göndermez. Kariyer kayıtları ve başarımlar yalnızca cihazda saklanır. Android build&#39;de isteğe bağlı Google Play Billing ve AdMob kullanılabilir.</p><p>Oyun kayıtları, tercihler, başkan profili ve başarım ilerlemesi yalnızca cihaz üzerindeki yerel depolama alanlarında tutulur.</p>
-      <ul><li>Büyük Başkan içinde ayrı hesap sistemi yoktur.</li><li>Geliştiriciye otomatik kişisel veri aktarımı yoktur.</li><li>Kariyer kayıtları ve başarımlar yalnızca cihazda yerel olarak saklanır; bulut kaydı yoktur.</li><li>Android build&#39;de isteğe bağlı Google Play Billing ve AdMob kullanılabilir.</li><li>Android manifestinde mevcut izin yüzeyi: INTERNET ve AD_ID.</li></ul>
+      <p>Büyük Başkan kendi kullanıcı hesabı açmaz ve geliştirici sunucusuna kişisel veri göndermez. Kariyer kayıtları ve başarımlar cihazda saklanır; Google Play Games ile giriş yaparsan kariyerini Google hesabına da yedekleyebilirsin ve başarımların Play Games profiline eklenir. Android build&#39;de isteğe bağlı Google Play Billing ve AdMob kullanılabilir.</p><p>Oyun kayıtları, tercihler, başkan profili ve başarım ilerlemesi cihaz üzerindeki yerel depolama alanlarında tutulur. Bulut yedeği isteğe bağlıdır ve varsayılan olarak kapalıdır.</p>
+      <ul><li>Büyük Başkan içinde ayrı hesap sistemi yoktur.</li><li>Geliştiriciye otomatik kişisel veri aktarımı yoktur.</li><li>Kariyer kayıtları ve başarımlar cihazda saklanır; Google Play Games ile bulut yedeği isteğe bağlıdır ve varsayılan olarak kapalıdır.</li><li>Android build&#39;de isteğe bağlı Google Play Billing ve AdMob kullanılabilir.</li><li>Uygulamanın kendi Android manifesti INTERNET ve AD_ID izinlerini ister; build&#39;deki kütüphaneler (Google reklam, ödeme, Play Games ve titreşim eklentisi) ağ durumu, reklam hizmetleri, ödeme, uyanık tutma, ön plan hizmeti ve titreşim izinlerini ekler.</li></ul>
     </section>
   
     <section class="panel">
       <h2>Cihazda saklanan veriler</h2>
-      <p>Uygulama oyun ilerlemesini, takım tercihlerini, ses ve sunum ayarlarını, kariyer kayıtlarını ve benzer oyun içi durumları IndexedDB ve localStorage gibi cihaz yerel depolama alanlarında saklayabilir.</p><p>Bu veriler oyunun çalışması için kullanılır. Geliştirici bu verileri otomatik olarak almaz. Tüm kayıt ve başarım verileri cihazda kalır.</p>
-      <ul><li>Kariyer ilerlemesi ve kulüp durumu</li><li>Kayıt slotları</li><li>Dil, ses ve sunum tercihleri</li><li>Başkan adı, kulüp adı, stadyum adı ve oyun içi seçimler</li><li>Başarım ilerlemesi (yalnızca cihazda yerel)</li></ul>
+      <p>Uygulama oyun ilerlemesini, takım tercihlerini, ses ve sunum ayarlarını, kariyer kayıtlarını ve benzer oyun içi durumları IndexedDB ve localStorage gibi cihaz yerel depolama alanlarında saklayabilir.</p><p>Bu veriler oyunun çalışması için kullanılır. Geliştirici bu verileri otomatik olarak almaz. Kayıt ve başarım verileri cihazdan yalnızca Google Play Games&#39;i kullandığında çıkar (aşağıya bak).</p>
+      <ul><li>Kariyer ilerlemesi ve kulüp durumu</li><li>Kayıt slotları</li><li>Dil, ses ve sunum tercihleri</li><li>Başkan adı, kulüp adı, stadyum adı ve oyun içi seçimler</li><li>Başarım ilerlemesi (cihazda; giriş yaptıysan Play Games&#39;te de)</li></ul>
+    </section>
+  
+    <section class="panel">
+      <h2>Google Play Games (isteğe bağlı)</h2>
+      <p>Android&#39;de oyun, bulut kaydı ve başarımlar için Google Play Games&#39;i kullanabilir. Girişi Google yönetir: cihazında Play Games kullanıyorsan oyun açılırken giriş yapılabilir ya da kayıt ekranından kendin giriş yapabilirsin. Oyun, giriş yapmadan da eksiksiz çalışır.</p><p>Bulut kaydı: &quot;Buluta kaydet&quot;i seçtiğinde ya da &quot;Otomatik bulut yedeği&quot;ni açtığında (varsayılan olarak kapalıdır) kariyer kaydının bir kopyası Play Games Kayıtlı Oyunlar üzerinden Google hesabında saklanır. Bu kopya başkan, kulüp ve stadyum adın ile kariyer ilerlemen gibi oyun verilerini içerir. &quot;Buluttan yükle&quot; bu kaydı cihaza indirir.</p><p>Başarımlar: giriş yaptığın sürece kariyerinde açılan başarımlar Play Games profilinde de açılır. Google, Play Games profilini ve bu verileri kendi gizlilik politikasına göre işler. Geliştiricinin sunucusu yoktur; Play Games kimliğin, kayıtların ve başarımların geliştiriciye gönderilmez.</p>
+      <ul><li>Sağlayıcı: Google LLC / Google Ireland Limited (Google Play Games Hizmetleri).</li><li>Bulut kaydı ve otomatik yedek, sen açana kadar kapalıdır.</li><li>Bulutta tek bir kariyer kaydı tutulur; yeniden kaydetmek öncekinin yerini alır.</li><li>Bu oyunun verilerini Google hesabından, Google Play Games uygulamasının ayarlarından silebilirsin.</li></ul>
     </section>
   
     <section class="panel">
       <h2>Reklam ve satın alma</h2>
-      <p>Android build&#39;de yalnızca Google AdMob ödüllü videoları vardır ve yalnızca Finans &gt; Yatırım Al ekranından sen başlatınca açılır (sezonda en fazla 10). Geçiş (ara) reklamı yoktur.</p><p>AdMob; reklam kimliği, cihaz tanımlayıcıları, IP adresi ve uygulama etkileşimi gibi verileri Google tarafında reklam sunumu, ölçüm ve dolandırıcılık önleme için işleyebilir. Geliştirici bu reklam verilerini kendi sunucusuna otomatik aktarmaz.</p><p>Uygulama içi satın almalar (üç yatırımcı para paketi ve Süper Stadyum), ürünler Play Console&#39;da aktif olunca Google Play Billing üzerinden çalışır.</p><p>Reklam izni: Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre&#39;de ya da Google&#39;ın izin istediği başka bir bölgedeysen, uygulama açılışta Google&#39;ın izin formunu (User Messaging Platform) gösterir. Reklam verisinin kişiselleştirilmiş reklam için kullanılıp kullanılmayacağını orada seçersin. İzin vermezsen ödüllü videolar sınırlı, kişiselleştirilmemiş reklamlarla sunulabilir. İzin sorusuna yanıt alınamazsa (örneğin bağlantı yoksa) ödüllü video açılmaz.</p><p>Seçimini istediğin zaman Ayarlar &gt; Reklam gizlilik seçenekleri&#39;nden değiştirebilir ya da geri çekebilirsin. Bu satır yalnızca Google izin formunu gerektirdiğinde görünür; formun gerekmediği bölgelerde kişiselleştirilmiş reklam tercihini cihazının Google reklam ayarlarından yönetebilirsin.</p>
-      <ul><li>AdMob sağlayıcısı: Google LLC / Google Ireland Limited.</li><li>Reklam izni Google&#39;ın izin formuyla alınır ve Ayarlar &gt; Reklam gizlilik seçenekleri&#39;nden değiştirilir.</li><li>Ödüllü reklam izleme tamamen isteğe bağlıdır.</li><li>Reklam verisi işleme ayrıntıları için Google AdMob gizlilik politikası geçerlidir.</li><li>Billing aktifleşince satın almalar Google Play ödeme sistemi üzerinden işlenir.</li><li>Oyun içi para paketleri yalnızca simülasyon bakiyesi sağlar.</li><li>Sosyal medya takip ya da paylaşım ödülü yoktur.</li></ul>
+      <p>Android build&#39;de yalnızca Google AdMob ödüllü videoları vardır ve yalnızca sen başlatınca açılır: Ek Gelir ekranında ya da bir inşaata veya transfere paran yetmediğinde çıkan &quot;Video izle&quot; satırında (sezonda en fazla 10). Bu ekrana ana ekrandaki Ek gelir kutusundan ya da Finans ekranından girilir. Geçiş (ara) reklamı yoktur.</p><p>AdMob; reklam kimliği, cihaz tanımlayıcıları, IP adresi ve uygulama etkileşimi gibi verileri Google tarafında reklam sunumu, ölçüm ve dolandırıcılık önleme için işleyebilir. Geliştirici bu reklam verilerini kendi sunucusuna otomatik aktarmaz.</p><p>Uygulama içi satın almalar (üç destek paketi ve Süper Stadyum) Google Play Billing üzerinden çalışır.</p><p>Reklam izni: Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre&#39;de ya da Google&#39;ın izin istediği başka bir bölgedeysen, uygulama açılışta Google&#39;ın izin formunu (User Messaging Platform) gösterir. Reklam verisinin kişiselleştirilmiş reklam için kullanılıp kullanılmayacağını orada seçersin. İzin vermezsen ödüllü videolar sınırlı, kişiselleştirilmemiş reklamlarla sunulabilir. İzin sorusuna yanıt alınamazsa (örneğin bağlantı yoksa) ödüllü video açılmaz.</p><p>Seçimini istediğin zaman Ayarlar &gt; Reklam gizlilik seçenekleri&#39;nden değiştirebilir ya da geri çekebilirsin. Bu satır yalnızca Google izin formunu gerektirdiğinde görünür; formun gerekmediği bölgelerde kişiselleştirilmiş reklam tercihini cihazının Google reklam ayarlarından yönetebilirsin.</p>
+      <ul><li>AdMob sağlayıcısı: Google LLC / Google Ireland Limited.</li><li>Reklam izni Google&#39;ın izin formuyla alınır ve Ayarlar &gt; Reklam gizlilik seçenekleri&#39;nden değiştirilir.</li><li>Ödüllü reklam izleme tamamen isteğe bağlıdır.</li><li>Reklam verisi işleme ayrıntıları için Google AdMob gizlilik politikası geçerlidir.</li><li>Satın almalar Google Play ödeme sistemi üzerinden işlenir.</li><li>Oyun içi para paketleri yalnızca simülasyon bakiyesi sağlar.</li><li>Sosyal medya takip ya da paylaşım ödülü yoktur.</li></ul>
     </section>
   
     <section class="panel">
       <h2>Hata raporları (isteğe bağlı)</h2>
-      <p>Ayarlar &gt; Hata raporları gönder varsayılan olarak kapalıdır ve yalnızca hata raporlaması yapılandırılmış build&#39;lerde görünür. Açarsan uygulama çöktüğünde bir hata kaydı ve oturum sayısı Sentry&#39;ye şifreli bağlantıyla gönderilir.</p><p>Hata kaydında hata adı, sayı ve tırnak içi metinleri silinmiş hata mesajı, yığın izi, uygulama sürümü ve kimlikleri çıkarılmış ekran yolu bulunur. Cihaz modeli ve işletim sistemi sürümü gibi teknik cihaz bilgileri de eklenebilir. Kişisel veri, başkan, kulüp ya da oyuncu adı ve kayıt verisi gönderilmez.</p>
-      <ul><li>Hata raporu sağlayıcısı: Sentry (Functional Software, Inc.).</li><li>Anahtarı kapatınca gönderim hemen durur.</li><li>Hata raporları reklam ya da takip için kullanılmaz.</li></ul>
+      <p>Ayarlar &gt; Hata raporları gönder varsayılan olarak kapalıdır ve yalnızca hata raporlaması yapılandırılmış build&#39;lerde görünür. Açarsan uygulama çöktüğünde bir hata kaydı; cihaz modeli, Android sürümü ve rastgele bir kurulum kimliğiyle Google Firebase Crashlytics&#39;e şifreli bağlantıyla gönderilir.</p><p>Hata kaydında hata adı, sayı ve tırnak içi metinleri silinmiş hata mesajı, yığın izi, uygulama sürümü ve kimlikleri çıkarılmış ekran yolu bulunur. Cihaz modeli ve işletim sistemi sürümü gibi teknik cihaz bilgileri de eklenebilir. Kişisel veri, başkan, kulüp ya da oyuncu adı ve kayıt verisi gönderilmez.</p>
+      <ul><li>Hata raporu sağlayıcısı: Firebase Crashlytics (Google LLC).</li><li>Anahtarı kapatınca gönderim hemen durur.</li><li>Hata raporları reklam ya da takip için kullanılmaz.</li></ul>
     </section>
   
     <section class="panel">
       <h2>İletişim</h2>
       <p>Gizlilik soruları için mağaza sayfasında yayınlanacak geliştirici destek e-posta adresi kullanılmalıdır.</p>
-      <ul><li>Gizlilik URL&#39;si: https://huntertrgy.github.io/buyukbaskan/tr/privacy/</li><li>Şartlar URL&#39;si: https://huntertrgy.github.io/buyukbaskan/tr/terms/</li></ul>
+      <ul><li>Gizlilik URL&#39;si: https://huntertrgy.github.io/buyukbaskan/tr/privacy/</li><li>Güncel gizlilik politikası: https://conaksoft.com/documents/privacy.php?appname=B%C3%BCy%C3%BCk%20Ba%C5%9Fkan&amp;lang=tr</li><li>Şartlar URL&#39;si: https://huntertrgy.github.io/buyukbaskan/tr/terms/</li></ul>
     </section>
   
     </div>
       </main>
       <footer class="site-footer">
         <div class="site-footer__inner">
-          <span>Büyük Başkan, cihaz içi kariyer verileriyle çalışan futbol kulübü yönetim oyunudur.</span>
-          <span>Son güncelleme: 3 Haziran 2026</span>
+          <span>Büyük Başkan bir futbol kulübü yönetim oyunudur; kariyer verileri cihazda saklanır, Google Play Games bulut yedeği isteğe bağlıdır.</span>
+          <span>Son güncelleme: 12 Kasım 2026</span>
         </div>
       </footer>
     </div>

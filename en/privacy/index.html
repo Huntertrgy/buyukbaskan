@@ -41,7 +41,7 @@
       <main class="site-main">
         
     <section class="panel">
-      <span class="eyebrow">Last updated: October 20, 2026</span>
+      <span class="eyebrow">Last updated: November 12, 2026</span>
       <h1>Privacy Policy</h1>
       <p class="lead">This policy explains how the current release build of Büyük Başkan handles data.</p>
     </section>
@@ -49,40 +49,46 @@
       
     <section class="panel">
       <h2>Short summary</h2>
-      <p>Büyük Başkan does not create its own user account and does not send personal data to a developer server. Career saves and achievements stay on the device only. The Android build may optionally use Google Play Billing and AdMob.</p><p>Game saves, preferences, chairman profile choices, and achievement progress are stored in local device storage only.</p>
-      <ul><li>No separate Büyük Başkan account system.</li><li>No automatic personal-data transfer to the developer.</li><li>Career saves and achievements are stored locally on the device only; there is no cloud save.</li><li>The Android build may optionally use Google Play Billing and AdMob.</li><li>The current Android manifest surface includes INTERNET and AD_ID permissions.</li></ul>
+      <p>Büyük Başkan does not create its own user account and does not send personal data to a developer server. Career saves and achievements are stored on the device; if you sign in with Google Play Games, you can also back your career up to your Google account, and your achievements are added to your Play Games profile. The Android build may optionally use Google Play Billing and AdMob.</p><p>Game saves, preferences, chairman profile choices, and achievement progress are stored in local device storage. Cloud backup is optional and off by default.</p>
+      <ul><li>No separate Büyük Başkan account system.</li><li>No automatic personal-data transfer to the developer.</li><li>Career saves and achievements are stored on the device; cloud backup through Google Play Games is optional and off by default.</li><li>The Android build may optionally use Google Play Billing and AdMob.</li><li>The app&#39;s own Android manifest requests INTERNET and AD_ID; the libraries in the build (Google ads, billing, Play Games and the haptics plugin) add network-state, ad-services, billing, wake-lock, foreground-service and vibration permissions.</li></ul>
     </section>
   
     <section class="panel">
       <h2>Data stored on the device</h2>
-      <p>The app may store game progress, team preferences, audio and presentation settings, career saves, and similar game state in device-local storage such as IndexedDB and localStorage.</p><p>This data is used to run the game. The developer does not automatically receive it. All save and achievement data remains on the device.</p>
-      <ul><li>Career progress and club state</li><li>Save slots</li><li>Language, audio, and display preferences</li><li>Chairman name, club name, stadium name, and in-game choices</li><li>Achievement progress (device-local only)</li></ul>
+      <p>The app may store game progress, team preferences, audio and presentation settings, career saves, and similar game state in device-local storage such as IndexedDB and localStorage.</p><p>This data is used to run the game. The developer does not automatically receive it. Save and achievement data leaves the device only through Google Play Games, when you use it (see below).</p>
+      <ul><li>Career progress and club state</li><li>Save slots</li><li>Language, audio, and display preferences</li><li>Chairman name, club name, stadium name, and in-game choices</li><li>Achievement progress (on the device; also in Play Games when you are signed in)</li></ul>
+    </section>
+  
+    <section class="panel">
+      <h2>Google Play Games (optional)</h2>
+      <p>On Android the game can use Google Play Games for cloud save and achievements. Sign-in is handled by Google: if you use Play Games on your device you may be signed in when the game starts, or you can sign in yourself from the save screen. The game works fully without signing in.</p><p>Cloud save: when you choose &quot;Save to cloud&quot; or switch on &quot;Automatic cloud backup&quot; (off by default), a copy of your career save is stored in your Google account through Play Games Saved Games. It holds game data such as your chairman, club and stadium names and your career progress. &quot;Load from cloud&quot; downloads it to the device.</p><p>Achievements: while you are signed in, achievements unlocked in your career are also unlocked in your Play Games profile. Google processes your Play Games profile and this data under its own privacy policy. The developer has no server and does not receive your Play Games identity, your saves or your achievements.</p>
+      <ul><li>Provider: Google LLC / Google Ireland Limited (Google Play Games Services).</li><li>Cloud save and automatic backup stay off until you turn them on.</li><li>The cloud holds one career save; saving again replaces it.</li><li>You can delete this game&#39;s data from your Google account in the settings of the Google Play Games app.</li></ul>
     </section>
   
     <section class="panel">
       <h2>Ads and purchases</h2>
-      <p>The Android build shows Google AdMob rewarded videos only, and only when you start one from Finance &gt; Get Investment (up to 10 a season). There are no interstitial ads.</p><p>AdMob may process advertising ID, device identifiers, IP address, and app interaction data on Google&#39;s side for ad delivery, measurement, and fraud prevention. The developer does not automatically transfer this ad data to its own servers.</p><p>In-app purchases (three investor cash packs and the Super Stadium) run through Google Play Billing once the products are active in Play Console.</p><p>Ad consent: if you are in the European Economic Area, the UK or Switzerland, or another region where Google asks for consent, the app shows Google&#39;s consent form (User Messaging Platform) at start-up. There you choose whether ad data may be used for personalised ads. If you do not consent, rewarded videos may be served with limited, non-personalised ads. If no consent answer can be obtained (for example offline), no rewarded video opens.</p><p>You can change or withdraw your choice at any time in Settings &gt; Ad privacy options. That entry appears only when Google requires the consent form; where it is not required, manage personalised ads in your device&#39;s Google ad settings.</p>
-      <ul><li>Ad provider: Google LLC / Google Ireland Limited.</li><li>Ad consent is collected with Google&#39;s consent form and changed in Settings &gt; Ad privacy options.</li><li>Rewarded ad viewing is fully optional.</li><li>See Google AdMob privacy policy for ad data processing details.</li><li>When Billing is enabled, purchases run through Google Play.</li><li>In-game cash packs only affect the simulation balance.</li><li>There are no social follow or share rewards.</li></ul>
+      <p>The Android build shows Google AdMob rewarded videos only, and only when you start one: on the Raise Funds screen, or from the &quot;Watch a video&quot; line shown where a build or a signing is short of money (up to 10 a season). The screen opens from the Funds tile on the home screen or from Finances. There are no interstitial ads.</p><p>AdMob may process advertising ID, device identifiers, IP address, and app interaction data on Google&#39;s side for ad delivery, measurement, and fraud prevention. The developer does not automatically transfer this ad data to its own servers.</p><p>In-app purchases (three backing packs and the Super Stadium) run through Google Play Billing.</p><p>Ad consent: if you are in the European Economic Area, the UK or Switzerland, or another region where Google asks for consent, the app shows Google&#39;s consent form (User Messaging Platform) at start-up. There you choose whether ad data may be used for personalised ads. If you do not consent, rewarded videos may be served with limited, non-personalised ads. If no consent answer can be obtained (for example offline), no rewarded video opens.</p><p>You can change or withdraw your choice at any time in Settings &gt; Ad privacy options. That entry appears only when Google requires the consent form; where it is not required, manage personalised ads in your device&#39;s Google ad settings.</p>
+      <ul><li>Ad provider: Google LLC / Google Ireland Limited.</li><li>Ad consent is collected with Google&#39;s consent form and changed in Settings &gt; Ad privacy options.</li><li>Rewarded ad viewing is fully optional.</li><li>See Google AdMob privacy policy for ad data processing details.</li><li>Purchases run through Google Play.</li><li>In-game cash packs only affect the simulation balance.</li><li>There are no social follow or share rewards.</li></ul>
     </section>
   
     <section class="panel">
       <h2>Crash reports (optional)</h2>
-      <p>Settings &gt; Send crash reports is off by default and appears only in builds with crash reporting configured. When you switch it on, a crash record and session counts are sent to Sentry over an encrypted connection when the app crashes.</p><p>A crash record holds the error name, the error message with numbers and quoted text removed, the stack trace, the app version and the screen path with ids removed. Technical device details such as the device model and OS version may be added. No personal data, no chairman, club or player names and no save data are sent.</p>
-      <ul><li>Crash report provider: Sentry (Functional Software, Inc.).</li><li>Switching it off stops sending at once.</li><li>Crash reports are not used for advertising or tracking.</li></ul>
+      <p>Settings &gt; Send crash reports is off by default and appears only in builds with crash reporting configured. When you switch it on, a crash record is sent to Google Firebase Crashlytics over an encrypted connection when the app crashes, with the device model, the Android version and a random installation id.</p><p>A crash record holds the error name, the error message with numbers and quoted text removed, the stack trace, the app version and the screen path with ids removed. Technical device details such as the device model and OS version may be added. No personal data, no chairman, club or player names and no save data are sent.</p>
+      <ul><li>Crash report provider: Firebase Crashlytics (Google LLC).</li><li>Switching it off stops sending at once.</li><li>Crash reports are not used for advertising or tracking.</li></ul>
     </section>
   
     <section class="panel">
       <h2>Contact</h2>
       <p>Use the developer support email published on the store listing for privacy questions.</p>
-      <ul><li>Privacy URL: https://huntertrgy.github.io/buyukbaskan/en/privacy/</li><li>Terms URL: https://huntertrgy.github.io/buyukbaskan/en/terms/</li></ul>
+      <ul><li>Privacy URL: https://huntertrgy.github.io/buyukbaskan/en/privacy/</li><li>Current privacy policy: https://conaksoft.com/documents/privacy.php?appname=B%C3%BCy%C3%BCk%20Ba%C5%9Fkan&amp;lang=en</li><li>Terms URL: https://huntertrgy.github.io/buyukbaskan/en/terms/</li></ul>
     </section>
   
     </div>
       </main>
       <footer class="site-footer">
         <div class="site-footer__inner">
-          <span>Büyük Başkan is a football club management game with device-local career data.</span>
-          <span>Last updated: June 3, 2026</span>
+          <span>Büyük Başkan is a football club management game; career data is stored on the device, with optional Google Play Games cloud backup.</span>
+          <span>Last updated: November 12, 2026</span>
         </div>
       </footer>
     </div>
